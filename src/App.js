@@ -78,7 +78,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://infinite-fjord-79763.herokuapp.com/imageUrl', {
+      fetch('https://pacific-sierra-67862.herokuapp.com/imageUrl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -88,7 +88,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
           if (response) {
-          fetch('https://infinite-fjord-79763.herokuapp.com/image', {
+          fetch('https://pacific-sierra-67862.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
