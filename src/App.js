@@ -78,6 +78,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
+      if({imageURL !=== 0}){
       fetch('https://pacific-sierra-67862.herokuapp.com/imageUrl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
@@ -105,7 +106,8 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
-
+}
+}
   onRouteChange = (route) => {
     if (route === 'signout') {
       this.setState(initialState)
