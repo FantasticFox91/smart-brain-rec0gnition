@@ -77,7 +77,7 @@ class App extends Component {
   }
 
   onButtonSubmit = () => {
-    this.setState({require(imageUrl: this.state.input});
+    this.setState({imageUrl: this.state.input});
       fetch('https://pacific-sierra-67862.herokuapp.com/imageUrl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
@@ -87,8 +87,7 @@ class App extends Component {
           })
       .then(response => response.json())
       .then(response => {
-          if (response) {
-          fetch('https://pacific-sierra-67862.herokuapp.com/image', {
+            fetch('https://pacific-sierra-67862.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -131,6 +130,7 @@ class App extends Component {
                 entries={this.state.user.entries}
               />
               <ImageLinkForm
+                default 
                 onInputChange={this.onInputChange}
                 onButtonSubmit={this.onButtonSubmit}
               />
